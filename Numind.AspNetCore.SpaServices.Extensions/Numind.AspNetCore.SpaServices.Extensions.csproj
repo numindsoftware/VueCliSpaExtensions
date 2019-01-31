@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>Allows use of vue-cli-service in ASPNetCore Spa Applications by supporting a development experience similar to both UseReactDevelopmentServer &amp; UseAngularCliServer.
+See: https://www.nuget.org/packages/Microsoft.AspNetCore.SpaServices.Extensions/
+This library supports both NPM and Yarn package managers.</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <Authors>Numind Software</Authors>
+    <PackageTags>aspnetcore nodeservices spaservices</PackageTags>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="2.2.0" />
+  </ItemGroup>
 
 </Project>
