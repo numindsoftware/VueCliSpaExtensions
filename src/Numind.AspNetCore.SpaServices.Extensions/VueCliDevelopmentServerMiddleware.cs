@@ -20,12 +20,12 @@ namespace Numind.AspNetCore.SpaServices.VueCliDevelopmentServer
     internal static class VueCliDevelopmentServerMiddleware
     {
         private const string LogCategoryName = "Numind.AspNetCore.SpaServices";
-        private static TimeSpan RegexMatchTimeout = TimeSpan.FromSeconds(5); // This is a development-time only feature, so a very long timeout is fine
+        private static TimeSpan RegexMatchTimeout = TimeSpan.FromMinutes(1); // This is a development-time only feature, so a very long timeout is fine
 
         public static void Attach(
             ISpaBuilder spaBuilder,
             string nodeScriptName,
-            string packageManager = PackageManager.Npm)
+            string packageManager)
         {
             var sourcePath = spaBuilder.Options.SourcePath;
             if (string.IsNullOrEmpty(sourcePath))
@@ -81,7 +81,7 @@ namespace Numind.AspNetCore.SpaServices.VueCliDevelopmentServer
                     // it doesn't do so until it's finished compiling, and even then only if there were
                     // no compiler warnings. So instead of waiting for that, consider it ready as soon
                     // as it starts listening for requests.
-                    await nodeScriptRunner.StdOut.WaitForMatch(new Regex("Starting development server", RegexOptions.None, RegexMatchTimeout));
+                    await nodeScriptRunner.StdOut.WaitForMatch(new Regex("App running at:", RegexOptions.None, RegexMatchTimeout));
                 }
                 catch (EndOfStreamException ex)
                 {

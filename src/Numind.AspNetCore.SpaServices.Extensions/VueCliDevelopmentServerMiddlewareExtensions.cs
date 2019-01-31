@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.SpaServices;
+using Numind.AspNetCore.SpaServices.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -20,7 +21,8 @@ namespace Numind.AspNetCore.SpaServices.VueCliDevelopmentServer
         /// <param name="npmScript">The name of the script in your package.json file that launches the vue-cli-service server.</param>
         public static void UseVueCliDevelopmentServer(
             this ISpaBuilder spaBuilder,
-            string npmScript)
+            string npmScript,
+            string packageManager = PackageManager.Npm)
         {
             if (spaBuilder == null)
             {
@@ -34,7 +36,7 @@ namespace Numind.AspNetCore.SpaServices.VueCliDevelopmentServer
                 throw new InvalidOperationException($"To use {nameof(UseVueCliDevelopmentServer)}, you must supply a non-empty value for the {nameof(SpaOptions.SourcePath)} property of {nameof(SpaOptions)} when calling {nameof(SpaApplicationBuilderExtensions.UseSpa)}.");
             }
 
-            VueCliDevelopmentServerMiddleware.Attach(spaBuilder, npmScript);
+            VueCliDevelopmentServerMiddleware.Attach(spaBuilder, npmScript, packageManager);
         }
     }
 }

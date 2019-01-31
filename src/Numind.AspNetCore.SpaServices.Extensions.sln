@@ -10,6 +10,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9577970A-9D80-42D3-887E-DCC31191DFF5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1E171524-9EC3-42DB-BFA5-18C5026777DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VueCliSpaTest", "..\tests\VueCliSpaTest\VueCliSpaTest.csproj", "{DF55DB44-4110-402B-8DBD-5E9F33A15A4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,9 +26,17 @@ Global
 		{BBE90F26-7D04-4BC0-9C72-219D9D1F895C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBE90F26-7D04-4BC0-9C72-219D9D1F895C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBE90F26-7D04-4BC0-9C72-219D9D1F895C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF55DB44-4110-402B-8DBD-5E9F33A15A4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF55DB44-4110-402B-8DBD-5E9F33A15A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF55DB44-4110-402B-8DBD-5E9F33A15A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF55DB44-4110-402B-8DBD-5E9F33A15A4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BBE90F26-7D04-4BC0-9C72-219D9D1F895C} = {9577970A-9D80-42D3-887E-DCC31191DFF5}
+		{DF55DB44-4110-402B-8DBD-5E9F33A15A4A} = {1E171524-9EC3-42DB-BFA5-18C5026777DC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {91106754-BE34-465F-B873-45ACB32439DE}
