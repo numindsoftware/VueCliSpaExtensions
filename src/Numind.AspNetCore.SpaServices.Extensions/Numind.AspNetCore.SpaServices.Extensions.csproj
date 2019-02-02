@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -6,9 +6,12 @@
 See: https://www.nuget.org/packages/Microsoft.AspNetCore.SpaServices.Extensions/
 This library supports both NPM and Yarn package managers.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <License>https://github.com/numindsoftware/VueCliSpaExtensions</License>
     <Authors>Numind Software</Authors>
     <PackageTags>aspnetcore nodeservices spaservices</PackageTags>
+    <RepositoryUrl>https://github.com/numindsoftware/VueCliSpaExtensions</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
